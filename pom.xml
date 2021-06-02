@@ -14,7 +14,10 @@
         <module>common</module>
         <!-- mybatis自动生成的文件 -->
         <module>myBatisGenerator</module>
+        <!-- oauth2 -->
         <module>auth</module>
+        <!-- 用户管理 - 管理员页面 -->
+        <module>admin</module>
     </modules>
 
     <parent>

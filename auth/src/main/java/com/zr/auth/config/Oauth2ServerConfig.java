@@ -38,6 +38,7 @@ public class Oauth2ServerConfig extends AuthorizationServerConfigurerAdapter {
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+        // 把客户端信息保存在内存中 --- 还有另一种，保存到数据库中，oauth自带sql表的
         clients.inMemory()
                 .withClient("admin-app")
                 .secret(passwordEncoder.encode("123456"))
@@ -45,6 +46,7 @@ public class Oauth2ServerConfig extends AuthorizationServerConfigurerAdapter {
                 .authorizedGrantTypes("password", "refresh_token")
                 .accessTokenValiditySeconds(3600*24)
                 .refreshTokenValiditySeconds(3600*24*7)
+
                 .and()
                 .withClient("portal-app")
                 .secret(passwordEncoder.encode("123456"))

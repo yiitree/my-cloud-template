@@ -14,6 +14,7 @@ import java.util.List;
 
 /**
  * Swagger基础配置
+ * 每个微服务继承此接口，然后补充swaggerProperties方法，
  */
 public abstract class BaseSwaggerConfig {
 

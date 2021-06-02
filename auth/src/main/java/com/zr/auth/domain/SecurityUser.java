@@ -1,6 +1,6 @@
 package com.zr.auth.domain;
 
-import com.macro.mall.common.domain.UserDto;
+import log.domain.UserDto;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

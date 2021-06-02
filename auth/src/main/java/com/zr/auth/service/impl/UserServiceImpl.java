@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * 用户管理业务类
- * Created by macro on 2020/6/19.
+ * 实现springsecurity自带的UserDetailsService接口
  */
 @Service
 public class UserServiceImpl implements UserDetailsService {
@@ -32,6 +32,12 @@ public class UserServiceImpl implements UserDetailsService {
     @Autowired
     private HttpServletRequest request;
 
+    /**
+     * springsecurity内部认证接口，会自动调用
+     * @param username
+     * @return
+     * @throws UsernameNotFoundException
+     */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         String clientId = request.getParameter("client_id");
